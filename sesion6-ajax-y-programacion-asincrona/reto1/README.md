@@ -23,67 +23,17 @@ const axios     = require('axios')
    c. population
    d. flag
 
-```javascript
-const countriesCallbacks = () => {
-    request.get('https://restcountries.eu/rest/v2/all', (error, response, body) => {
-        return body.data.map(country => {
-            return {
-                name: country.name,
-                capital: country.capital,
-                population: country.population,
-                flat: country.flag,
-            }
-        })
-    })
-}
-```
 #### Promesas
 3. Crea una función que retorne, a través de Promesas, un objeto que incluya de cada país:
  a. name
  b. capital
  c. population
  d. flag
-```javascript
 
-
-const countriesPromises = () => {
-    axios.get('https://restcountries.eu/rest/v2/all').then(response => {
-        const countryList = response.data.map(country => {
-            return {
-                name: country.name,
-                capital: country.capital,
-                population: country.population,
-                flat: country.flag,
-            }
-        })
-    })
-}
-
-countriesPromises()
-
-```
 #### Async - Await
 4. Crea una función que retorne, a través de async-await, un objeto que incluya de cada país:
  a. name
  b. capital
  c. population
  d. flag
-```javascript
-
-const countriesAsyncAwait = async () => {
-
-    const response = await axios.get('https://restcountries.eu/rest/v2/all')
-
-    return response.data.map(country => {
-        return {
-            name: country.name,
-            capital: country.capital,
-            population: country.population,
-            flat: country.flag,
-        }
-    })
-}
-
-countriesAsyncAwait()
-```
 

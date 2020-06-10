@@ -44,19 +44,4 @@ const movies = [
         fechaDeLanzamiento: " 5 de julio de 2019"
     }
 ]  
-
-const uppercaseTitles = (arrayMovies) => {
-    return arrayMovies.map(e => {
-        return e.titulo.charAt(0).toUpperCase()
-    })
-}
-
-const gettingData = (arrayMovies) => {
-    return arrayMovies.map(e => {
-        return {
-            id: e.id,
-            titulo: e.titulo
-        }
-    })
-}
 ```
